@@ -11,7 +11,10 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt-get update -y
-          sudo apt-get install -y user-mode-linux uml-utilities bridge-utils debootstrap
+          # sudo apt-get install -y user-mode-linux uml-utilities bridge-utils debootstrap
+          sudo apt-get install -y bridge-utils cpu-checker libvirt-clients libvirt-daemon qemu qemu-kvm qemu-utils virt-manager virt-viewer virtinst virt-top libguestfs-tools
+          # install bridge-utils cpu-checker libvirt-clients libvirt-daemon qemu qemu-kvm
+          kvm-ok
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
       - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
