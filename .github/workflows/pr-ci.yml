@@ -11,5 +11,6 @@ jobs:
     name: "tests on ubunt"
     runs-on: ubuntu-latest
     steps:
-      - run: |
-        echo "I'm running"
+      - name: echo
+        run: |
+          echo "I'm running"
