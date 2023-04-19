@@ -7,6 +7,8 @@ jobs:
     steps:
       - name: uname
         run: uname -a
+      - name: lsb_release
+        run: lsb_release -a
       - name: curl example
         run: curl http://example.com
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
